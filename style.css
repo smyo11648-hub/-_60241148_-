@@ -1,0 +1,165 @@
+/* ----------------------------- */
+/* 반짝이는 작은 별 */
+.star-field {
+  position: absolute;
+  inset: 0;
+  z-index: 1; /* 배경 위, 행성 아래 */
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* 작은 별 점 하나 */
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+/* 반짝이는 애니메이션 */
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+}
+.hit-area1 {
+  position: absolute;
+  top: 65%;
+  left: 55%;
+  width: 4vw;
+  height: 4.2vh;
+  border-radius: 50%;
+  z-index: 999; /* 최상단 */
+  background: rgba(237, 65, 65, 0);
+  cursor: pointer;
+}
+
+.hit-area2 {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 4vw;
+  height: 4.2vh;
+  border-radius: 50%;
+  z-index: 998;
+  background: rgba(237, 65, 65, 0);
+  cursor: pointer;
+}
+
+.hit-area3 {
+  position: absolute;
+  top: 75%;
+  left: 46%;
+  width: 6vw;
+  height: 9vh;
+  border-radius: 50%;
+  z-index: 997;
+  background: rgba(237, 65, 65, 0);
+  cursor: pointer;
+}
+
+.hit-area4 {
+  position: absolute;
+  top: 10%;
+  left: 41%;
+  width: 6vw;
+  height: 10vh;
+  border-radius: 50%;
+  z-index: 996;
+  background: rgba(237, 65, 65, 0);
+  cursor: pointer;
+}
+
+.hit-area5 {
+  position: absolute;
+  top: 45%;
+  left: 81%;
+  width: 10vw;
+  height: 16vh;
+  border-radius: 50%;
+  z-index: 995;
+  background: rgba(237, 65, 65, 0);
+  cursor: pointer;
+}
+
+.hit-area6 {
+  position: absolute;
+  top: 57%;
+  left: 2%;
+  width: 8vw;
+  height: 10vh;
+  border-radius: 50%;
+  z-index: 994;
+  background: rgba(237, 65, 65, 0);
+  cursor: pointer;
+}
+
+.hit-area7 {
+  position: absolute;
+  top: 75%;
+  left: 8%;
+  width: 8vw;
+  height: 12vh;
+  border-radius: 50%;
+  z-index: 993;
+  background: rgba(237, 65, 65, 0);
+  cursor: pointer;
+}
+
+.hit-area8 {
+  position: absolute;
+  top: 78%;
+  left: 87%;
+  width: 7vw;
+  height: 12vh;
+  border-radius: 50%;
+  z-index: 992;
+  background: rgba(237, 65, 65, 0);
+  cursor: pointer;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate > img {
+  animation: spin var(--speed, 10s) linear infinite;
+}
+
+/* 예시: 수성=planet1, 금성=planet2 ... */
+.planet1 {
+  --speed: 6.5s;
+} /* 수성 */
+.planet2 {
+  --speed: 8s;
+} /* 금성 */
+.planet3 {
+  --speed: 11s;
+} /* 지구 */
+.planet4 {
+  --speed: 17s;
+} /* 화성 */
+.planet5 {
+  --speed: 22s;
+} /* 목성 */
+.planet6 {
+  --speed: 23s;
+} /* 토성 */
+.planet7 {
+  --speed: 24s;
+} /* 천왕성 */
+.planet8 {
+  --speed: 50s;
+} /* 해왕성 */
