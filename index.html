@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
   </head>
+  <!-- jQuery CDN 삽입 -->
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"
+  ></script>
   <body style="margin: 0; overflow: hidden">
     <!-- 배경 -->
     <div
@@ -22,9 +29,12 @@
         alt=""
       />
 
+      <!-- 별 반짝임 레이어 -->
+      <div class="star-field"></div>
+
       <!-- 해왕성 -->
       <div
-        class="planet"
+        class="planet8"
         style="
           position: absolute;
           top: 50%;
@@ -41,11 +51,13 @@
           alt=""
           style="width: 100%; height: 100%; display: block"
         />
+        <div class="hit-area8"
+       >
       </div>
 
       <!-- 천왕성 -->
       <div
-        class="planet"
+        class="planet7"
         style="
           position: absolute;
           top: 50%;
@@ -62,11 +74,13 @@
           alt=""
           style="width: 100%; height: 100%; display: block"
         />
+        <div class="hit-area7"
+       >
       </div>
 
       <!-- 토성 -->
       <div
-        class="planet"
+        class="planet6"
         style="
           position: absolute;
           top: 50%;
@@ -83,11 +97,13 @@
           alt=""
           style="width: 100%; height: 100%; display: block"
         />
+        <div class="hit-area6"
+       >
       </div>
 
       <!-- 목성 -->
       <div
-        class="planet"
+        class="planet5"
         style="
           position: absolute;
           top: 50%;
@@ -104,11 +120,13 @@
           alt=""
           style="width: 100%; height: 100%; display: block"
         />
+        <div class="hit-area5"
+       >
       </div>
 
       <!-- 화성 -->
       <div
-        class="planet"
+        class="planet4"
         style="
           position: absolute;
           top: 50%;
@@ -125,11 +143,13 @@
           alt=""
           style="width: 100%; height: 100%; display: block"
         />
+        <div class="hit-area4"
+       >
       </div>
 
       <!-- 지구 -->
       <div
-        class="planet"
+        class="planet3"
         style="
           position: absolute;
           top: 50%;
@@ -146,11 +166,13 @@
           alt=""
           style="width: 100%; height: 100%; display: block"
         />
+        <div class="hit-area3"
+       >
       </div>
 
       <!-- 금성 -->
       <div
-        class="planet"
+        class="planet2"
         style="
           position: absolute;
           top: 50%;
@@ -167,52 +189,29 @@
           alt=""
           style="width: 100%; height: 100%; display: block"
         />
+        <div class="hit-area2"
+       >
       </div>
 
       <!-- 수성 -->
-      <div
-        class="planet"
-        style="
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 56vw;
-          height: 101vh;
-          transform: translate(-50%, -50%);
-          z-index: 1;
-          cursor: pointer;
-        "
-      >
-        <img
-          src="수수.png"
-          alt=""
-          style="width: 100%; height: 100%; display: block"
-        />
+      <div class="planet1"
+      style="
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       width: 56vw;
+       height: 101vh;
+       transform: translate(-50%, -50%);
+       z-index: 1;
+       cursor: pointer;
+     ">
+       <img src="수수.png" alt="" style="width: 100%; height: 100%; display: block" />
+       <div class="hit-area1"
+       >
       </div>
-    </div>
-
-    <!-- 회전 -->
-    <style>
-      @keyframes spin {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
-      }
-      .planet img {
-        transform-origin: 50% 50%;
-      }
-      .rotate img {
-        animation: spin 8s linear infinite;
-      }
-    </style>
-
-    <script>
-      document.querySelectorAll(".planet").forEach((p) => {
-        p.addEventListener("click", () => p.classList.toggle("rotate"));
-      });
-    </script>
+   </div>
+  
+   <script src="script.js"></script>
   </body>
 </html>
+
