@@ -1,9 +1,8 @@
-/* ----------------------------- */
 /* 반짝이는 작은 별 */
 .star-field {
   position: absolute;
   inset: 0;
-  z-index: 1; /* 배경 위, 행성 아래 */
+  z-index: 1;
   overflow: hidden;
   pointer-events: none;
 }
@@ -135,31 +134,30 @@
 }
 
 .rotate > img {
-  animation: spin var(--speed, 10s) linear infinite;
+  animation: spin var(--speed, 10s) linear 1;
 }
 
-/* 예시: 수성=planet1, 금성=planet2 ... */
 .planet1 {
-  --speed: 6.5s;
+  --speed: 8s;
 } /* 수성 */
 .planet2 {
-  --speed: 8s;
+  --speed: 10s;
 } /* 금성 */
 .planet3 {
-  --speed: 11s;
+  --speed: 12s;
 } /* 지구 */
 .planet4 {
   --speed: 17s;
 } /* 화성 */
 .planet5 {
-  --speed: 22s;
+  --speed: 19s;
 } /* 목성 */
 .planet6 {
-  --speed: 23s;
+  --speed: 21s;
 } /* 토성 */
 .planet7 {
-  --speed: 24s;
+  --speed: 22s;
 } /* 천왕성 */
 .planet8 {
-  --speed: 50s;
+  --speed: 24s;
 } /* 해왕성 */
